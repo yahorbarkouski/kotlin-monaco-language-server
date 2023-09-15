@@ -13,7 +13,7 @@ npm run dev # run React app
 ```
 
 ## How it works
-Websocket server creates a websocket connection between React app and Kotlin Language Server executable, converting json-rpc messages to websocket messages and vice versa.
+Websocket server creates a websocket connection between React app and Kotlin Language Server executable, converting json-rpc messages to websocket messages and vice versa. Worth mentioning that monaco editor doesn't support language clients out of the box, so this library is using [monaco-languageclient](https://github.com/TypeFox/monaco-languageclient) lib to cover this case painlessly.
 
 ### Notes
 For simplicity, Kotlin Language Server executables has been git-tracked in this repository. You may also build and use the latest version from [here](https://github.com/fwcd/kotlin-language-server).
