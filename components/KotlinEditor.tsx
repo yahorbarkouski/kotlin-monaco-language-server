@@ -6,7 +6,7 @@ import 'monaco-editor/esm/vs/basic-languages/kotlin/kotlin.contribution.js';
 import {buildWorkerDefinition} from 'monaco-editor-workers';
 import {snippets} from "@/data/snippets";
 
-buildWorkerDefinition('../../../node_modules/monaco-editor-workers/dist/workers', import.meta.url, false);
+buildWorkerDefinition('../node_modules/monaco-editor-workers/dist/workers', import.meta.url, false);
 
 export default function KotlinEditor() {
     const rootElem = document.getElementById('root-editor')!;
