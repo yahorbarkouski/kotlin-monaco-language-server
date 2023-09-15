@@ -1,34 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# React Monaco Editor x Kotlin Language Server (websockets) showcase
+This is a sample project that demonstrates how to use [React Monaco Editor](https://github.com/react-monaco-editor/react-monaco-editor) with [Kotlin Language Server](https://github.com/fwcd/kotlin-language-server) via websocket connection.
 
-## Getting Started
-
-First, run the development server:
-
+## Quick Start
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+npm i # install dependencies for both server and client
+npm run start:server # run websocket server to communicate with Kotlin Language Server
+npm run dev # run React app
 ```
+![showcase](docs/img/showcase.mp4)
+## How it works
+Websocket server creates a websocket connection between React app and Kotlin Language Server executable, converting json-rpc messages to websocket messages and vice versa.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Notes
+For simplicity, Kotlin Language Server executables has been git-tracked in this repository. You may also build and use the latest version from [here](https://github.com/fwcd/kotlin-language-server).
